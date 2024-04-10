@@ -1,0 +1,9 @@
+<%= form_with(url: check_status_tickets_path, method: :get, id: "status-form-container") do |form| %>
+    <%= form.text_field :order_number, placeholder: 'Order Number', class: 'single_line_field' %>
+    <%= form.submit 'Check Status', class: 'submit_form' %>
+    <% if @status_message.present? %>
+        <div class="status_label">
+            <%= @status_message %>
+        </div>
+    <% end %>
+<% end %>

@@ -1,0 +1,51 @@
+@import "application";
+
+header {
+    margin: -10px -10px -10px -10px;
+    font-family: "Quicksand", sans-serif;
+    color: $color-text;
+}
+
+header::after {
+    content: '';
+    display: table;
+    clear: both;
+}
+
+nav {
+    float: center;
+}
+
+nav ul {
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}
+
+nav li {
+    display: inline-block;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    transition: 0.2s;
+
+    &:hover {
+        background-color: $primary-color-hover;
+        transition: 0.2s;
+    }
+}
+
+li a {
+    padding-left: 30px;
+    padding-right: 30px;
+    padding-top: 15px;
+    padding-bottom: 15px;
+    width: 100%;
+    height: 100%;
+    text-decoration: none;
+    color: $color-text;
+}
+
+.nav_container {
+    background-color: $primary-color;
+}

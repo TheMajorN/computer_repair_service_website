@@ -1,0 +1,16 @@
+<head>
+    <%= stylesheet_link_tag "navbar", "data-turbo-track": "reload" %>
+</head>
+
+<header>
+    <div class="nav_container">
+        <nav>
+            <ul>
+                <li><%= link_to "Home", tickets_path %></li>
+                <li><%= link_to "Check My Ticket Status", check_status_tickets_path %></li>
+                <li><%= link_to "Services & Prices", services_and_prices_path %></li>
+                <li><%= link_to "About My Business", about_path %></li>
+            </ul>
+        </nav>
+    </div>
+</header>

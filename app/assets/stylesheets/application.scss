@@ -1,0 +1,174 @@
+$color-text: #e5e9ec;
+$primary-color: #007bff;
+$primary-color-hover: #0056b3;
+
+#ticket-form {
+  font-family: "Quicksand", sans-serif;
+  justify-content: center;
+  align-items: center;
+}
+
+.text_label {
+  font-family: "Quicksand", sans-serif;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  width: 100%;
+}
+
+.create_ticket_button,
+.submit_form {
+  font-family: "Quicksand", sans-serif;
+  font-size: 26px;
+  text-align: center;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  width: 100%;
+  padding: 10px;
+  border-radius: 5px;
+  text-decoration: none;
+  color: $color-text;
+  background-color: $primary-color;
+  border-color: $primary-color;
+  transition: 0.2s;
+  display: block;
+
+  &:hover {
+      background-color: $primary-color-hover;
+      border-color: $primary-color-hover;
+      transition: 0.2s;
+  }
+}
+
+.submit_form {
+  cursor: pointer;
+  border: 0;
+  &:hover {
+    border-color: #1e7e34;
+  }
+}
+
+.create_ticket_button {
+  position: absolute;
+  top: 20%;
+  text-decoration: none;
+  border-color: $primary-color;
+  transition: transform 0.5s ease-in-out;
+}
+
+#ticket-form-container {
+  padding-left: 10px;
+  padding-right: 10px;
+  display: none;
+  transition: max-height 0.5s ease-in-out;
+  overflow: hidden;
+  max-height: 0;
+}
+
+#new-ticket-form {
+  position: absolute;
+  overflow: hidden;
+  margin-left: -200px;
+  margin-top: -300px;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 600px;
+}
+
+.single_line_field,
+.multi_line_field {
+  font-family: "Quicksand", sans-serif;
+  margin-bottom: 5px;
+  width: 100%;
+  padding: 5px;
+  border-style: solid;
+  border-radius: 5px;
+  box-sizing: border-box;
+  font-size: 16px;
+  transition: 0.2s;
+
+  &:focus {
+      outline: none !important;
+      box-shadow: 0 0 10px #719ECE;
+      transition: 0.2s;
+  }
+}
+
+.single_line_field {
+  margin-top: 60px;
+}
+
+.multi_line_field {
+  height: 200px;
+}
+
+.form-expanded #ticket-form-container {
+    display: block;
+    max-height: 1000px;
+    transition: max-height 0.5s ease-in-out;
+}
+
+.form-expanded #create-ticket {
+    transform: translateY(-225%);
+}
+
+#status-form-container {
+  position: absolute;
+  overflow: hidden;
+  margin-left: -200px;
+  margin-top: -300px;
+  top: 50%;
+  left: 50%;
+  width: 400px;
+  height: 600px;
+
+  .single_line_field {
+    margin-top: 5px;
+  }
+}
+
+.status_label {
+  text-align: center;
+  font-family: "Quicksand", sans-serif;
+  font-size: 24px;
+}
+
+.services-container {
+  font-family: "Quicksand", sans-serif;
+  width: 100%;
+  max-width: 600px; /* Adjust as needed */
+  margin: 0 auto;
+}
+
+.price-list {
+  list-style: none;
+  padding: 0;
+}
+
+.service-item {
+  margin-bottom: 20px;
+  border-bottom: 1px solid #ccc;
+  padding-bottom: 15px;
+}
+
+.service-name {
+  font-weight: bold;
+  font-size: 18px;
+}
+
+.service-price {
+  float: right;
+  font-size: 18px;
+}
+
+.service-description {
+  font-size: 14px;
+  margin-top: 5px;
+  color: #666;
+}
+
+.no_bullet {
+  list-style-type: none;
+}
