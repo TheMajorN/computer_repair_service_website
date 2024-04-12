@@ -49,3 +49,29 @@ li a {
 .nav_container {
     background-color: $primary-color;
 }
+
+.pull_right {
+    position: absolute;
+    right: 1%;
+  }
+
+  button {
+    font-family: "Quicksand", sans-serif;
+    font-size: 12px;
+    font-weight: bold;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    border: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  button.primary {
+    background-color: $primary-color;
+    color: #fff;
+  }
+  
+  button.primary:hover {
+    background-color: $primary-color-hover;
+  }

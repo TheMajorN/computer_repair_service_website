@@ -1,0 +1,21 @@
+<h1>Admin Ticket Management</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Title</th>
+      <th>Description</th>
+      <th>Status</th>
+      <th>Actions</th>
+    </tr>
+  </thead>
+  <tbody>
+    <% @tickets.each do |ticket| %>
+      <tr>
+        <td><%= ticket.description %></td>
+        <td><%= ticket.status %></td>
+        <td><%= ticket.status_message %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>

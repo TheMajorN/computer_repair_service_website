@@ -172,3 +172,52 @@ $primary-color-hover: #0056b3;
 .no_bullet {
   list-style-type: none;
 }
+
+.login-container {
+  font-family: "Quicksand", sans-serif;
+  margin: 100px auto;
+  max-width: 400px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.login-container h2 {
+  color: $primary-color;
+  margin-bottom: 20px;
+}
+
+.field {
+  margin-right: 20px;
+  margin-bottom: 20px;
+}
+
+.label {
+  color: $color-text;
+}
+
+.input-field {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+}
+
+.actions {
+  text-align: center;
+}
+
+.actions input[type="submit"] {
+  background-color: $primary-color;
+  color: #fff;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.actions input[type="submit"]:hover {
+  background-color: $primary-color-hover;
+}
