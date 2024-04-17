@@ -1,20 +1,17 @@
 class Ticket < ApplicationRecord
-  attr_accessor :email_or_phone
-  attr_accessor :status_message
-  
   before_create :generate_order_number
-
-  before_validation :split_email_or_phone
 
   validates :status, presence: true
 
   private
 
-  def split_email_or_phone
-    if email_or_phone.include?('@')
-      self.email = email_or_phone
-    else
-      self.phone = email_or_phone
+  def split_email_or_phone(email_or_phone)
+    if email_or_phone.present?
+      if email_or_phone.include?('@')
+        self.email = email_or_phone
+      else
+        self.phone = email_or_phone
+      end
     end
   end
 

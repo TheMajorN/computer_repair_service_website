@@ -1,21 +1,28 @@
-<h1>Admin Ticket Management</h1>
+<h1 class="admin_header">Admin Ticket Management</h1>
 
-<table>
+<table class="admin_table">
   <thead>
     <tr>
-      <th>Title</th>
+      <th>Order Number</th>
       <th>Description</th>
-      <th>Status</th>
-      <th>Actions</th>
+      <th>Update Status</th>
     </tr>
   </thead>
   <tbody>
-    <% @tickets.each do |ticket| %>
-      <tr>
-        <td><%= ticket.description %></td>
-        <td><%= ticket.status %></td>
-        <td><%= ticket.status_message %></td>
-      </tr>
+    <% if @tickets.present? %>
+      <% @tickets.each do |ticket| %>
+        <tr>
+          <td><%= ticket.order_number %></td>
+          <td class="description"><%= ticket.description %></td>
+          <td>
+            <%= form_with(model: ticket, url: admin_ticket_path(ticket), method: :patch, class: "admin_form") do |form| %>
+              <%= form.select :status, ['Received', 'In Progress', 'Ready to Return', 'Resolved'], {}, {class: "status_form_control"} %>
+              <%= form.text_area :status_message, rows: 2, class: "form_control" %>
+              <%= form.submit "Update", class: "btn btn-primary" %>
+            <% end %>
+          </td>
+        </tr>
+      <% end %>
     <% end %>
   </tbody>
 </table>

@@ -1,11 +1,13 @@
 <div id="ticket-form">
-    <%= form_with(model: @ticket, id: 'new-ticket-form') do |form| %>
-      <%= link_to 'Create a Ticket', '#', id: 'create-ticket', class: 'create_ticket_button' %>
-      <div id="ticket-form-container">
-        <%= form.text_field :email_or_phone, placeholder: 'Enter your email or phone number.', class: 'single_line_field', id: 'email_or_phone_field' %>
-        <%= form.text_area :description, placeholder: 'Enter a description of your problem.', class: 'multi_line_field' %>
-        <div id="validation-message" style="display: none; color: red;"></div>
-        <%= form.submit 'Submit Ticket', class: 'submit_form' %>
-      </div>
-    <% end %>
+  <%= form_with(model: @ticket, id: 'new-ticket-form') do |form| %>
+    <%= link_to 'Create a Ticket', '#', id: 'create-ticket', class: 'create_ticket_button' %>
+    <div id="ticket-form-container">
+      <%= form.text_field :email_or_phone, placeholder: 'Enter your email or phone number.', class: 'single_line_field', id: 'email_or_phone_field' %>
+      <%= form.hidden_field :email, id: "ticket_email" %>
+      <%= form.hidden_field :phone, id: "ticket_phone" %>
+      <%= form.text_area :description, placeholder: 'Enter a description of your problem.', class: 'multi_line_field' %>
+      <div id="validation-message" style="display: none; color: red;"></div>
+      <%= form.submit 'Submit Ticket', class: 'submit_form' %>
+    </div>
+  <% end %>
 </div>
